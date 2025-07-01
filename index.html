@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz matemática básica</title>
+  <meta name="description" content="Um quiz interativo para testar seus conhecimentos em matemática.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz interativo para alunos de matemática CEAK</h1>
+    <p>Teste seus conhecimentos em matemática e veja qual pontuação você consegue fazer!</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sobre esse quiz</h2>
+      <p>Este quiz foi desenvolvido para testar seus conhecimentos em matemática básica, e é composto por uma série de perguntas envolvendo <strong>aritmética, álgebra e geometria</strong>.</p>
+      <p>Você irá relembrar conceitos como <abbr title="mínimo múltiplo comum">MMC</abbr> e <abbr title="máximo divisor comum">MDC</abbr>, entre outros.</p>
+    </section>
+
+    <section>
+      <h2>Pergunta 1: Quais são os dez primeiros números primos?</h2>
+      <form>
+        <input type="radio" name="pergunta 1" value="1;3;5;7;11;13;17;19;23;29" id="p1a">
+        <label for="p1a">1;3;5;7;11;13;17;19;23;29</label><br>
+        <input type="radio" name="pergunta 1" value="1;3;5;7;11;13;17;19;23;27" id="p1b">
+        <label for="p1b">1;3;5;7;11;13;17;19;23;27</label><br>
+        <input type="radio" name="pergunta 1" value="1;3;5;7;11;13;17;21;23;27" id="p1c">
+        <label for="p1c">1;3;5;7;11;13;17;21;23;27</label><br>
+      </form>
+    </section>
+
+    <section>
+      <h2>Pergunta 2: 91 é um número primo? Explique.</h2>
+      <form>
+        <input type="text" name="pergunta 2" placeholder="Digite aqui sua resposta">
+      </form>
+    </section>
+
+    <section>
+      <h2>Pergunta 3: Qual é o <abbr title="Mínimo Múltiplo Comum">MMC</abbr> entre 3 e 21?</h2>
+      <form>
+        <input type="checkbox" name="pergunta3" value="24" id="p3a">
+        <label for="p3a">24</label><br>
+        <input type="checkbox" name="pergunta3" value="33" id="p3b">
+        <label for="p3b">33</label><br>
+        <input type="checkbox" name="pergunta3" value="42" id="p3c">
+        <label for="p3c">42</label><br>
+      </form>
+    </section>
+
+    <section>
+      <h2>Pergunta 4: Qual função melhor representa o gráfico a seguir?</h2>
+      <img src="Captura de tela 2025-04-19 150217.png" alt="Gráfico de função quadrática"><br>
+      <form>
+        <input type="radio" name="pergunta 4" value="y = x<sup>2</sup> + 2x + 4" id="p4a">
+        <label for="p4a">y = x² + 2x + 4</label><br>
+        <input type="radio" name="pergunta 4" value="y = x<sup>2</sup> + 2x - 4" id="p4b">
+        <label for="p4b">y = x² + 2x - 4</label><br>
+        <input type="radio" name="pergunta 4" value="y = x<sup>2</sup> + x + 4" id="p4c">
+        <label for="p4c">y = x² + x + 4</label><br>
+      </form>
+    </section>
+
+    <section>
+      <h2>Nos dê o seu feedback</h2>
+      <fieldset>
+        <legend>Informações de contato</legend>
+        <form id="feedbackForm" action="https://formspree.io/f/mjkrydnl" method="POST">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" required>
+
+          <label for="comentario">Comentário:</label>
+          <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+          <!-- Campos ocultos preenchidos via JS -->
+          <input type="hidden" id="campoAcertos" name="Acertos">
+          <input type="hidden" id="campoErros" name="Erros">
+          <input type="hidden" id="campoResumo" name="Resumo_das_respostas">
+
+          <button type="submit">Enviar respostas e feedback</button>
+        </form>
+      </fieldset>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quiz de matemática. Todos os direitos reservados.</p>
+    <p>Para conhecer outros quizzes <a href="https://flgferas.github.io/sitenovoleo/" target="_blank">clique aqui</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
