@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'pergunta 2': 'não, pois é divisível por 7 e por 13 além de 1 e 91',
       'pergunta3': ['42'],
       'pergunta 4': 'y = x<sup>2</sup> + 2x - 4'
+      'pergunta 5': 'Bryan'
     };
 
     const normalizeText = (text) =>
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const p2 = document.querySelector('input[name="pergunta 2"]');
     const p3Selecionados = Array.from(document.querySelectorAll('input[name="pergunta3"]:checked')).map(el => el.value);
     const p4 = document.querySelector('input[name="pergunta 4"]:checked');
+    const p5 = document.querySelector('input[name="pergunta 5"]:checked');
 
     if (p1 && p1.value === gabarito['pergunta 1']) acertos++; else erros++;
 
@@ -33,12 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (p4 && p4.value.replace(/\s+/g, '') === gabarito['pergunta 4'].replace(/\s+/g, '')) acertos++; else erros++;
+    if (p5 && p5.value.replace(/\s+/g, '') === gabarito['pergunta 5'].replace(/\s+/g, '')) acertos++; else erros++;
 
     const resumo = `
       Pergunta 1: ${p1 ? p1.value : 'sem resposta'}
       Pergunta 2: ${p2 ? p2.value.trim() : 'sem resposta'}
       Pergunta 3: ${p3Selecionados.join(', ') || 'sem resposta'}
       Pergunta 4: ${p4 ? p4.value : 'sem resposta'}
+      Pergunta 5: ${p5 ? p5.value : 'sem resposta'}
     `;
 
     document.getElementById('campoAcertos').value = acertos;
