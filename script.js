@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', function (event) {
     // Corrigir e contar respostas
     const gabarito = {
-      'pergunta 1': '1;3;5;7;11;13;17;19;23;29',
-      'pergunta 2': 'não, pois é divisível por 7 e por 13 além de 1 e 91',
+      'pergunta 1': '25%',
+      'pergunta 2': '1200 folhas',
       'pergunta3': ['42'],
       'pergunta 4': 'y = x<sup>2</sup> + 2x - 4'
-      'pergunta 5': 'Bryan'
+      'pergunta 5': '7,5'
     };
 
     const normalizeText = (text) =>
